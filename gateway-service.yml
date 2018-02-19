@@ -17,5 +17,7 @@ spring:
       routes:
       - id: message
         uri: message://configserver-client/rest/message
+        predicates:
+                - Host=**.configserver-client
     config:
       uri: http://localhost:8884
