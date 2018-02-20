@@ -1,18 +1,18 @@
 server:
-    port:8883
+    port: 8883
 management:
     security:
-        enabled:false
+        enabled: false
 eureka:
-    client:
-        register-with-eureka:false
-        fetch-registry:false
-        serviceUrl.defaultZone= http://${eureka.instance.hostname}:${server.port}/eureka/
-    server:
-        wait-time-in-ms-when-sync-empty:0
     instance:
-        hostname:localhost
-        
+        hostname: localhost
+    client:
+        register-with-eureka: false
+        fetch-registry: false
+        serviceUrl:
+            defaultZone: http://localhost:8883/eureka/
+    server:
+        wait-time-in-ms-when-sync-empty: 0
 spring:
     application:
         name: eureka_service

@@ -8,16 +8,19 @@ eureka:
         hostname: localhost
 server:
     port: 8870
-    
+
 spring:
   application:
     name: gateway-service
   cloud:
     gateway:
-      routes:
-      - id: message
-        uri: http://localhost:8885/rest/message
-        predicates:
-            - Path=/message
+        routes:
+          - id: message
+            uri: http://localhost:8885/rest/message
+            predicates:
+                - Path=/message
+    discovery:
+        locator:
+          enabled: true
     config:
       uri: http://localhost:8887
