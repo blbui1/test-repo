@@ -9,13 +9,13 @@ spring:
         name: configserver_client
     cloud:
         config:
-            uri: http://localhost:8887
+            uri: http://configserver_service:8887
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://localhost:8883/eureka   
+            defaultZone: http://serviceregistry-service:8883/eureka   
         register-with-eureka: true
         fetch-registry: true   
     instance:
         appname: client-service
-        hostname: localhost
+        hostname: serviceregistry-service

@@ -2,7 +2,7 @@ eureka:
     client:
         register-with-eureka: true
         fetch-registry: true
-        serviceUrl.defaultZone: http://localhost:8883/eureka
+        serviceUrl.defaultZone: http://serviceregistry-service:8883/eureka
     instance:
         appname: gateway-service
         hostname: localhost
@@ -16,11 +16,11 @@ spring:
     gateway:
         routes:
           - id: message
-            uri: http://localhost:8885/rest/message
+            uri: http://configserver_client:8885/rest/message
             predicates:
                 - Path=/message
     discovery:
         locator:
           enabled: true
     config:
-      uri: http://localhost:8887
+      uri: http://configserver_service:8887

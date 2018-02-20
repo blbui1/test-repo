@@ -5,12 +5,12 @@ management:
         enabled: false
 eureka:
     instance:
-        hostname: localhost
+        hostname: serviceregistry-service
     client:
         register-with-eureka: false
         fetch-registry: false
         serviceUrl:
-            defaultZone: http://localhost:8883/eureka/
+            defaultZone: http://serviceregistry-service:8883/eureka/
     server:
         wait-time-in-ms-when-sync-empty: 0
 spring:
@@ -18,4 +18,4 @@ spring:
         name: eureka_service
     cloud:
         config:
-            uri: http://localhost:8887
+            uri: http://configserver_service:8887
