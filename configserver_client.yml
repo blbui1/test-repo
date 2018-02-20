@@ -18,5 +18,4 @@ eureka:
         fetch-registry: true   
     instance:
         appname: client-service
-    instance:
         hostname: localhost
