@@ -20,4 +20,4 @@ spring:
         predicates:
             - Path=/message
     config:
-      uri: http://localhost:8884
+      uri: http://localhost:8887

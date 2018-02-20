@@ -12,3 +12,10 @@ eureka:
         wait-time-in-ms-when-sync-empty:0
     instance:
         hostname:localhost
+        
+spring:
+    application:
+        name: eureka_service
+    cloud:
+        config:
+            uri: http://localhost:8887
