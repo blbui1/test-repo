@@ -13,10 +13,10 @@ spring:
 
 eureka:
     client:
-        register-with-eureka:true
-        fetch-registry:true
         serviceUrl:
             defaultZone: http://localhost:8883/eureka
+        register-with-eureka:true
+        fetch-registry:true
     instance:
         appname: client-service
     instance:
