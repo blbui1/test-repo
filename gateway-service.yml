@@ -14,13 +14,13 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+        routes:
+          - id: message
+            uri: http://localhost:8885/rest/message
+            predicates:
+                - Path=/message
     discovery:
         locator:
           enabled: true
-      routes:
-      - id: message
-        uri: http://localhost:8885/rest/message
-        predicates:
-            - Path=/message
     config:
       uri: http://localhost:8887
