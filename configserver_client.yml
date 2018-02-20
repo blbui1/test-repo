@@ -20,5 +20,3 @@ eureka:
         appname: client-service
     instance:
         hostname: localhost
-        
-            
