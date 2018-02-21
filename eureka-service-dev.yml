@@ -7,8 +7,8 @@ eureka:
     instance:
         hostname: serviceregistry-service
     client:
-        register-with-eureka: false
-        fetch-registry: false
+        registerWithEureka: false
+        fetchRegistry: false
         serviceUrl:
             defaultZone: http://serviceregistry-service:8883/eureka/
     server:
