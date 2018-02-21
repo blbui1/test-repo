@@ -6,10 +6,10 @@ server:
     port: 8885
 spring:
     application:
-        name: configserver_client
+        name: configserver-client
     cloud:
         config:
-            uri: http://configserver_service:8887
+            uri: http://configserver-service:8887
 eureka:
     client:
         serviceUrl:
